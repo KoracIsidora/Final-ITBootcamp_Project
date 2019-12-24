@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAdSwUCAkuufPdfVRIhPm3lb-2lRxtSnYztozRNl_N67SC6TBK'); */
+  /* background: linear-gradient(black, lightseagreen);
+  background-position: right 45px bottom; */
+}
+
+textarea{
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+nav{
+  width: 15%;
+  background: linear-gradient(black,white);
+  height: 99%; 
+  position: fixed; 
+  overflow: auto; 
+  text-align: center;
+}
+
+.loginform, .registerform{
+  border: 1px solid black;
+  width: auto;
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  background-color: black;
+  color: aliceblue;
+}
+
+.login, .register{
+  display: block;
+  padding: 10px; 
+  text-align:center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dotted lightseagreen;
+  outline: none;
+  color: aliceblue;
+}
+
+.regbutt{
+  margin: 10px;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: lightseagreen;
+  color: aliceblue;
+  outline: none;
+}
+
+footer{
+  position: fixed;
+  height: 140px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  float: right;
+} 
+
+.home{
+  border: 2px dotted lightseagreen;
+  font-size: 50px;
+}
+
+.username{
+  text-decoration: underline;
+}
+
+
+
