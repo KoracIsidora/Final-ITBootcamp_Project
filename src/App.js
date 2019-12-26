@@ -4,7 +4,6 @@ import Header from './layout/header';
 import Footer from './layout/footer';
 import { BrowserRouter } from 'react-router-dom';
 import Content from './layout/content';
-import Profile from './components/profile';
 
 function App() {
 
@@ -14,8 +13,8 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <Header logedIn={user} setUser={setUser}></Header>
-      <Profile></Profile>
-      <Content setUser={setUser} user={user}></Content>
+      
+      <Content setUser={setUser} user={user} logedIn={user}></Content>
       
       <Footer></Footer>
     </div>

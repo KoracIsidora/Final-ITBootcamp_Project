@@ -7,7 +7,8 @@ const Home = () =>{
             the official forum of IT Bootcamp!<br/>
             Here, you can start various topics <br/>
             with your friends and exchange messages. <br/>
-            Hope you enjoy it!
+            Hope you enjoy it! <br/>
+            Login or register to continue.
             </p>
         </div>
     )

@@ -1,11 +1,11 @@
 import React from 'react';
-import Logo from '../components/logo';
+import logo from '../assets/logo.png';
 
 const Footer = () =>{
     return(
         <footer>
-            <Logo></Logo>
-            <p>&copy; Isidora Korac 2019</p>
+            <img className='logo' src={logo} alt='logo'/>
+            {/* <p>&copy; Isidora Korac 2019</p> */}
         </footer>
     )
 }

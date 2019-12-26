@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { getProfile } from '../utilities/service';
+import users from '../assets/users.png';
 
-const Profile = ({match}) => {
-    
-    const [userID] = useState();
-    const [user, setUser] = useState('')
+const Profile = ({ match }) => {
+    const [userID] = useState(match.params.user_id);
+    const [user, setUser] = useState({});
 
-    useEffect(()=>{
-        getProfile(userID).then(data=>{
-            setUser(data);
+    useEffect(() => {
+        getProfile(userID).then(data => {
+            console.log(data);
+            setUser(data.user);
         })
-    },[userID])
+    }, [userID]);
 
     return (
-        <div>
-            {console.log(user)}
-            <p>{user.name}</p>
-            <p>{user.surname}</p>
-            <p>{user.username}</p>
-            <p>{user.email}</p>
+        <div className='profil'>
+            <img className='slika' src={users} alt='user'/>
+            <label className='prof1'>Name: </label><p className='prof'>{user.name}</p>
+            <label className='prof1'>Surname: </label><p className='prof'>{user.surname}</p>
+            <label className='prof1' >Username: </label><p className='prof'>{user.username}</p>
+            <label className='prof1'>Email: </label> <p className='prof'>{user.email}</p>
         </div>
     )
 }

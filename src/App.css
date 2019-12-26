@@ -1,91 +1,324 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;
+ 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  scroll-behavior: smooth;
+ 
 }
 
 .App {
   text-align: center;
-  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAdSwUCAkuufPdfVRIhPm3lb-2lRxtSnYztozRNl_N67SC6TBK'); */
-  /* background: linear-gradient(black, lightseagreen);
-  background-position: right 45px bottom; */
-}
-
-textarea{
-  padding: 10px;
-  border-radius: 5px;
-  outline: none;
-}
-
-nav{
-  width: 15%;
-  background: linear-gradient(black,white);
-  height: 99%; 
-  position: fixed; 
-  overflow: auto; 
-  text-align: center;
 }
 
 .loginform, .registerform{
-  border: 1px solid black;
-  width: auto;
+  width: 400px;
   display: inline-block;
   margin: 20px;
   padding: 20px;
-  background-color: black;
-  color: aliceblue;
+  color: rgb(70, 159, 226);
+  margin-bottom: 95px;
+  text-align: center;
+  border: 0.5px solid grey;
+  background-color: rgb(234, 240, 244);
+  box-shadow: 5px 5px grey;
+}
+
+.loginform{
+  margin-bottom: 350px;
 }
 
 .login, .register{
   display: block;
-  padding: 10px; 
+  padding: 10px;
   text-align:center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   background-color: transparent;
   border: none;
-  border-bottom: 1px dotted lightseagreen;
+  border-bottom: 1px dotted rgb(24, 137, 222);
   outline: none;
-  color: aliceblue;
+  color: rgb(70, 159, 226);
+  margin: 0px auto 0px auto;
+}
+
+.reg{
+  height: auto;
+  position:relative;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  color: rgb(70, 159, 226); ;
+}
+
+.log{
+  height: auto;
+  position:relative;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  color: rgb(70, 159, 226);
 }
 
 .regbutt{
   margin: 10px;
   padding: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  background-color: lightseagreen;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  background-color: rgb(63, 156, 226);
   color: aliceblue;
   outline: none;
+  width: 100px;
+}
+
+.regbutth{
+  margin: 10px;
+  padding: 10px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  background-color:transparent;
+  border: none;
+  font-size: large;
+  text-decoration: underline;
+  outline: none;
+  float: right;
+  width: 100px;
+  color:aliceblue;
 }
 
 footer{
   position: fixed;
-  height: 140px;
+  height: 70px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin-bottom: 0px;
   float: right;
-} 
+  background-image: linear-gradient(to left, whitesmoke, rgb(24, 137, 222));
+  color: aliceblue;
+}
 
 .home{
-  border: 2px dotted lightseagreen;
-  font-size: 50px;
+  font-size: 40px;
+  margin-bottom: 30px;
+  height: 540px;
+  margin-right: 0px;
+  color: rgb(70, 159, 226);
+}
+
+.home p{
+  text-shadow: 1px 1px grey;
+  margin-top: 100px;
+}
+
+
+h1{
+  display: inline;
+}
+
+header{
+  height: 70px;
+  text-align: center;
+  background-image: linear-gradient(to right, whitesmoke, rgb(24, 137, 222));
+}
+
+.topiclist{
+  list-style-position: outside;
+  width: 500px;
+  margin: 50px;
+  list-style-type: none;
+  border-radius: 5px;
+  background-color: rgb(63, 156, 226);
+  color:whitesmoke;  
+  border: 3px dotted rgb(63, 156, 226);
+}
+
+.lista{
+  margin-bottom: 200px;
+  overflow-y: scroll;
+  text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listitem{
+  margin: 20px auto 20px -40px;
+  font-size:20px;
+  padding: 10px;
+  list-style: inside;
+  list-style-type: "\270E";
+}
+
+.listitem:hover{
+  color:rgb(234, 240, 244);
+}
+
+.logo{
+  height: 70px;
+  width: 70px;
+}
+
+.radili{
+  height: 500px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.ntbtn{
+  background:none;
+  text-decoration: underline;
+  border: none;
+  font-size: large;
+  display: block;
+  float: right;
+}
+
+textarea{
+  padding: 10px;
+  outline: none;
+  display: block;
+  padding: 10px;
+  text-align:center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dotted rgb(24, 137, 222);
+  outline: none;
+  color: rgb(70, 159, 226);
+  margin: 0px auto 0px auto;
+}
+
+.title{
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  margin: 30px;
+  display: block;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dotted rgb(24, 137, 222);
+  outline: none;
+  color: rgb(70, 159, 226);
+  margin: 0px auto 0px auto;
+  margin-bottom: 20px;
+}
+
+.ntform{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 400px;
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  color: rgb(70, 159, 226);
+  text-align: center;
+  border: 0.5px solid grey;
+  background-color: rgb(234, 240, 244);
+  box-shadow: 5px 5px grey;
+}
+
+.btnnt{
+  margin: 10px;
+  padding: 10px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  background-color: rgb(63, 156, 226);
+  color: aliceblue;
+  outline: none;
+  width: 100px;
+}
+
+.labelnt{
+  font-size: 20px;
+  padding: 10px;
+}
+
+.oneform{
+  height: 450px;
+  overflow-y: scroll;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+  width: 700px;
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  color: rgb(70, 159, 226);
+  text-align: center;
+  border: 0.5px solid grey;
+  background-color: rgb(234, 240, 244);
+  box-shadow: 5px 5px grey;
+}
+
+.tema{
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .username{
   text-decoration: underline;
+  color: rgb(46, 147, 224);
+}
+
+.otlist{
+  list-style-type: none;
+  border: 0.5px solid grey;
+  box-shadow: 5px 5px grey; 
+  width: 630px;
+  font-weight: bold;  
+}
+
+.responsebtn{
+  margin: 10px;
+  padding: 10px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  background-color: rgb(63, 156, 226);
+  color: aliceblue;
+  outline: none;
+  width: 100px;
+}
+
+.responsevalue{
+  padding: 10px;
+  text-align: center;
+}
+
+.profil{
+  border: 0.5px solid grey;
+  width: 600px;
+  height: 490px;
+  margin: 30px auto 50px auto;
+  box-shadow: 5px 5px grey;
+  color: black;
+  background: linear-gradient(rgb(188, 217, 239)  , white);
+}
+
+.prof{
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  width: 50px;
+  
+}
+
+.slika{
+  
+  margin: 20px auto 20px 20px; 
+}
+
+.prof1{
+  font-size: 17px;
+  width: 50px;
+  text-decoration: underline;
+}
+
+.prof, .prof1, .slika{
+  display: block;
+  margin: 20px auto 0px auto;  
 }
 
 

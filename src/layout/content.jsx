@@ -17,7 +17,7 @@ const Content = ({setUser, user}) =>{
                 <Route path='/register' component={(props) => <Register setUser={setUser} {...props}/>}></Route>
                 <Route path='/list' component={List}></Route>
                 <Route path='/onetopic/:topic_id' component={(props) => <Onetopic setUser={setUser} user={user} {...props}/>}></Route>
-                <Route path='/profile' component={Profile}></Route>
+                <Route path='/profile/:user_id' component={Profile}></Route>
                 <Route path='/newtopic' component={(props)=> <Newtopic setUser={setUser} user={user} {...props}/>}></Route>
             </Switch>
         </div>

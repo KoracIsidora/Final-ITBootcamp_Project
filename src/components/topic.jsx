@@ -15,12 +15,13 @@ const Topic = ({ history, topicID, topic }) => {
             })
     }, [topicID]);
 
+
     return (
-        <>
-            <li onClick={() => {
-                history.push(`/onetopic/${topicID}`);
+        <ul className='topiclist'>
+            <li className='listitem' onClick={() => {
+                history.push(`/onetopic/${topicID}`) ;
             }} key={Math.random()}>{topic}</li>
-        </>
+        </ul>
     )
 }
 

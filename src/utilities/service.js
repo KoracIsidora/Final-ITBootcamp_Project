@@ -67,8 +67,14 @@ export function addOneTopicMessage(username, message, topic_id){
 }
 
 
-export function getProfile(id){
-    return fetch(`${url}${api}${user}/${id}`)
+export function getProfile(userID){
+    return fetch(`${url}${api}${user}/${userID}`)
     .then(res=>res.json());
 }
 
+
+
+export function getAllUsers(){
+    return fetch(`${url}${api}${user}`)
+    .then(res=>res.json())
+}

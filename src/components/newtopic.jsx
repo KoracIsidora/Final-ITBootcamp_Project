@@ -26,14 +26,16 @@ const Newtopic = ({setUser, history, user}) =>{
     }
 
     return(
-        <form>
-            <input type='text' placeholder='Title' onInput={e=>{
+        <form className='ntform'>
+            <label className='labelnt'><strong>Enter the title of your topic:</strong></label>
+            <input className='title' type='text' placeholder='Title' onInput={e=>{
                 setTitle(e.target.value);
             }}/>
-            <textarea rows="4" cols="50" form="usrform" placeholder='Enter text here' onInput={e=>{
+            <label className='labelnt'><strong>Add first message of your topic:</strong></label>
+            <textarea rows="4" cols="50" form="usrform" placeholder='Enter text here...' onInput={e=>{
                 setMessage(e.target.value);
             }}/>
-            <input type='submit' value='Add' onClick={e=>{e.preventDefault();addTopic()}}/>
+            <input className='btnnt' type='submit' value='Add' onClick={e=>{e.preventDefault();addTopic()}}/>
         </form>
     )
 }
