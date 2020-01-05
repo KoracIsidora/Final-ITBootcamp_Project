@@ -11,6 +11,12 @@ const Register = ({ setUser, history }) => {
     const [confirmPass, setPass] = useState('');
     const [validPass, setValidPass] = useState(false);
     const [isSamePass, setIsSamePass] = useState(false);
+    const [message, setMessage] = useState('');
+    let poruka = 'Passwords must be the same.';
+    const [validEmail, setValidEm] = useState('');
+    const [mail, setMail] = useState('');
+    let porukica = 'Invalid email!';
+    let note = '*Password must have at least 8 letters and a number.'
 
     useEffect(() => {
         function isValidPw() {
@@ -28,14 +34,39 @@ const Register = ({ setUser, history }) => {
         setIsSamePass(confirmPass === password);
     }, [confirmPass, password]);
 
+
+    useEffect(() => {
+        function isValidEmail() {
+            if ((/^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(email)) {
+                setValidEm(true);
+            }
+            else {
+                setValidEm(false);
+            }
+        }
+        isValidEmail();
+    }, [email]);
+
+    function validMail() {
+        if (validEmail === false) {
+            setMail(porukica);
+        }
+    }
+
+    function isItSame() {
+        if (confirmPass !== password) {
+            setMessage(poruka);
+        }
+    }
+
     function handleRegister() {
         if (!validPass || !isSamePass) return;
         register({ name, surname, username, email, password }).then(data => {
-            if (data.success === true) {
+            if (data.success === true && validEmail === true) {
                 setUser(data.user);
                 history.push('/list');
             } else {
-                console.log('Neuspesna registracija');
+                console.log('Not registered!');
             }
         })
     }
@@ -67,8 +98,12 @@ const Register = ({ setUser, history }) => {
                 <input className='register' type='password' placeholder='Confirm password' required onInput={e => {
                     setPass(e.target.value);
                 }} />
-                <input className='regbutt' type='submit' value='Register' onClick={e => { e.preventDefault(); handleRegister() }} />
+                <p>{message}</p>
+                <p>{mail}</p>
+                <input className='regbutt' type='submit' value='Register' onClick={e => { e.preventDefault(); handleRegister(); isItSame(); validMail() }} />
+                <p>{note}</p>
             </form>
+           
         </div>
     )
 }
