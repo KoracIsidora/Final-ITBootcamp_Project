@@ -21,7 +21,6 @@ const Onetopic = ({ match, history, user }) => {
         let username = user.user.username;
         addOneTopicMessage(username, field, topicID).then(data => {
             if (data.success) {
-                console.log(data);
                 history.push(`/list`);
             }
         })
